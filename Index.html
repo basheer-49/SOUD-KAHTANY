@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دراسة سوق وجدوى تجارية — علامة تجارية للملابس الداخلية النسائية في السعودية</title>
+<style>
+  :root{
+    --ivory:#faf7f2; --beige:#e8ddcf; --blush:#e9c8c8; --rose:#c98a8a;
+    --dark:#3d3630; --warmgray:#8a7f74; --accent:#a4685e; --white:#ffffff;
+    --green:#4a7a5c; --red:#b05050;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Segoe UI', Tahoma, 'Noto Kufi Arabic', Arial, sans-serif;
+    background:var(--ivory); color:var(--dark); line-height:1.9; font-size:15px;
+  }
+  .page{max-width:1000px;margin:0 auto;background:var(--white);box-shadow:0 0 40px rgba(61,54,48,.08)}
+  /* ===== الغلاف ===== */
+  .cover{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; padding:60px 40px;
+    background:linear-gradient(160deg,#faf7f2 0%, #f3e6de 45%, #e9d3cf 100%);
+    position:relative;
+  }
+  .cover::before{content:"";position:absolute;inset:24px;border:2px solid var(--rose);opacity:.5;pointer-events:none}
+  .cover .tag{display:inline-block;background:var(--accent);color:#fff;padding:8px 26px;border-radius:30px;font-size:14px;letter-spacing:1px;margin-bottom:28px}
+  .cover h1{font-size:40px;color:var(--dark);margin-bottom:14px;line-height:1.5}
+  .cover h2{font-size:22px;color:var(--accent);font-weight:600;margin-bottom:40px}
+  .cover p.desc{max-width:640px;color:var(--warmgray);font-size:17px;margin-bottom:50px}
+  .cover .meta{background:rgba(255,255,255,.6);border:1px solid var(--beige);border-radius:14px;padding:22px 46px;font-size:15px;color:var(--dark)}
+  .cover .meta span{display:block;margin:4px 0}
+  .cover .foot{position:absolute;bottom:50px;color:var(--warmgray);font-size:13px}
+  /* ===== ترويسة الأقسام ===== */
+  .section{padding:56px 60px;border-top:1px solid var(--beige)}
+  .section h2.sec-title{
+    font-size:26px;color:var(--accent);margin-bottom:8px;
+    padding-bottom:12px;border-bottom:3px solid var(--blush);display:inline-block;
+  }
+  .section .lead{color:var(--warmgray);margin:10px 0 24px;font-size:15px}
+  h3{font-size:19px;color:var(--dark);margin:26px 0 10px}
+  h4{font-size:16px;color:var(--accent);margin:18px 0 8px}
+  p{margin-bottom:12px}
+  ul,ol{margin:0 22px 14px 0}
+  li{margin-bottom:6px}
+  .box{background:var(--ivory);border:1px solid var(--beige);border-radius:12px;padding:20px 24px;margin:16px 0}
+  .box.highlight{background:#f6ecec;border-color:var(--rose)}
+  .box.green{background:#eef5f0;border-color:#bcd6c6}
+  .warn{color:var(--red);font-weight:600}
+  .ok{color:var(--green);font-weight:600}
+  /* ===== الجداول ===== */
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px;background:#fff}
+  th{background:var(--dark);color:#fff;padding:10px 8px;text-align:right;font-weight:600}
+  td{padding:9px 8px;border-bottom:1px solid var(--beige);vertical-align:top}
+  tr:nth-child(even) td{background:#faf6f1}
+  table.fin td, table.fin th{text-align:center}
+  td.num{direction:ltr;unicode-bidi:embed;text-align:center;white-space:nowrap}
+  .tbl-scroll{overflow-x:auto}
+  .tbl-note{font-size:12.5px;color:var(--warmgray);margin-top:4px}
+  /* ===== فهرس المحتويات ===== */
+  .toc{columns:2;column-gap:40px;margin-top:20px}
+  .toc a{display:block;color:var(--dark);text-decoration:none;padding:7px 0;border-bottom:1px dashed var(--beige);font-size:14.5px;transition:.2s}
+  .toc a:hover{color:var(--accent);padding-right:8px}
+  .toc a b{color:var(--accent);margin-left:8px}
+  /* ===== عناصر بصرية ===== */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+  .card{background:var(--ivory);border:1px solid var(--beige);border-radius:12px;padding:18px}
+  .card h4{margin-top:0}
+  .stat{background:#fff;border:1px solid var(--blush);border-radius:12px;padding:16px;text-align:center}
+  .stat .v{font-size:24px;font-weight:700;color:var(--accent);direction:ltr}
+  .stat .l{font-size:13px;color:var(--warmgray)}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13.5px}
+  .bar-row .lbl{width:150px;flex-shrink:0}
+  .bar{height:18px;background:linear-gradient(90deg,var(--rose),var(--accent));border-radius:9px}
+  .badge{display:inline-block;background:var(--beige);color:var(--dark);border-radius:20px;padding:2px 14px;font-size:12.5px;margin:2px}
+  .badge.p{background:var(--blush);color:#6e3a3a}
+  .badge.g{background:#d9e8de;color:#2f5a40}
+  footer{background:var(--dark);color:#cfc6bd;text-align:center;padding:26px;font-size:13px}
+  @media(max-width:720px){
+    .section{padding:36px 22px}
+    .cover h1{font-size:27px}
+    .toc{columns:1}
+    .grid2,.grid3{grid-template-columns:1fr}
+  }
+  @media print{
+    .section{page-break-inside:avoid}
+    .page{box-shadow:none;max-width:100%}
+    .cover{min-height:95vh}
+  }
+</style>
+<base target="_blank">
+</head>
+<body>
+<div class="page">
+
+<!-- ================= الغلاف ================= -->
+<div class="cover">
+  <span class="tag">دراسة استشارية احترافية</span>
+  <h1>دراسة سوق وجدوى تجارية واستراتيجية تأسيس علامة تجارية</h1>
+  <h2>متخصصة حصرياً في الملابس الداخلية النسائية</h2>
+  <p class="desc">دراسة متكاملة تشمل تحليل السوق السعودي، دراسة المنتجات والخامات، البحث العالمي عن المصانع والموردين، النماذج المالية بثلاثة سيناريوهات، تحليل المنافسين، الهوية البصرية، استراتيجية التسويق والبيع، وخطة تنفيذ خلال 90 يوماً.</p>
+  <div class="meta">
+    <span><b>السوق المستهدف:</b> المملكة العربية السعودية</span>
+    <span><b>تاريخ إعداد الدراسة:</b> نوفمبر 2026</span>
+    <span><b>تصنيف الوثيقة:</b> سرية — لأغراض اتخاذ القرار الاستثماري</span>
+  </div>
+  <div class="foot">سعر الصرف المعتمد في الدراسة: 1 دولار أمريكي ≈ 3.75 ريال سعودي</div>
+</div>
+
+<!-- ================= فهرس المحتويات ================= -->
+<div class="section" id="toc">
+  <h2 class="sec-title">فهرس المحتويات</h2>
+  <p class="lead">ملاحظة منهجية: جميع الأرقام المالية والأسعار في هذه الدراسة <b>تقديرات استرشادية</b> مبنية على متوسطات السوق المعروفة، ويجب التحقق منها بعروض أسعار رسمية من الموردين قبل اتخاذ أي قرار شراء.</p>
+  <div class="toc">
+    <a href="#s1"><b>1</b> ملخص تنفيذي</a>
+    <a href="#s2"><b>2</b> دراسة السوق السعودي</a>
+    <a href="#s3"><b>3</b> التشكيلة التجارية المقترحة (كتالوج)</a>
+    <a href="#s4"><b>4</b> دراسة الأقمشة والخامات</a>
+    <a href="#s5"><b>5</b> المصانع والموردون الدوليون</a>
+    <a href="#s6"><b>6</b> تكلفة التأسيس والاستثمار</a>
+    <a href="#s7"><b>7</b> تحليل المنافسين</a>
+    <a href="#s8"><b>8</b> الهوية البصرية</a>
+    <a href="#s9"><b>9</b> استراتيجية البيع داخل السعودية</a>
+    <a href="#s10"><b>10</b> التغليف محلياً</a>
+    <a href="#s11"><b>11</b> شركات الشحن والخدمات اللوجستية</a>
+    <a href="#s12"><b>12</b> استراتيجية التسويق الرقمي</a>
+    <a href="#s13"><b>13</b> الفئة المستهدفة والإعلانات</a>
+    <a href="#s14"><b>14</b> توقعات المبيعات 12 شهراً</a>
+    <a href="#s15"><b>15</b> خدمة العملاء والتشغيل</a>
+    <a href="#s16"><b>16</b> المخاطر والتحديات</a>
+    <a href="#s17"><b>17</b> خطة التنفيذ 90 يوماً</a>
+    <a href="#s18"><b>18</b> التوصيات الاستثمارية النهائية</a>
+    <a href="#s19"><b>19</b> المصادر والتحقق من البيانات</a>
+  </div>
+</div>
+
+<!-- ================= 1 ملخص تنفيذي ================= -->
+<div class="section" id="s1">
+  <h2 class="sec-title">1. الملخص التنفيذي</h2>
+  <p>يتناول هذا التقرير دراسة جدوى إطلاق علامة تجارية سعودية متخصصة <b>حصرياً</b> في الملابس الداخلية النسائية، تُباع عبر التجارة الإلكترونية. خلاصة الدراسة:</p>
+  <div class="grid3">
+    <div class="stat"><div class="v">18,872.30 – 30,195.68</div><div class="l">رأس المال الموصى به للسيناريو الاقتصادي–المتوسط (ر.س)</div></div>
+    <div class="stat"><div class="v">55–65%</div><div class="l">هامش الربح الإجمالي المستهدف</div></div>
+    <div class="stat"><div class="v">8–14 شهراً</div><div class="l">المدة المتوقعة للوصول إلى نقطة التعادل</div></div>
+  </div>
+  <div class="box green">
+    <b>الخلاصة:</b> المشروع <span class="ok">مجدٍ تجارياً</span> بشرط التخصص الحقيقي، والبدء بسيناريو اقتصادي–متوسط، والتوريد من تركيا أو الصين وفق جدول مقارنة الموردين، والتركيز على الراحة والخصوصية كميزة تنافسية أساسية.
+  </div>
+  <h3>لماذا تفضل المرأة السعودية علامتنا؟ (الإجابة الاستراتيجية)</h3>
+  <ol>
+    <li><b>تخصص حقيقي:</b> متجر يركز على الملابس الداخلية فقط يمنح ثقة وعمقاً في الخبرة، بعكس المتاجر العامة.</li>
+    <li><b>الراحة قبل المظهر:</b> تشكيلة مبنية على القطن والمودال والخيزران وبدون خياطة — مناسبة للطقس الحار.</li>
+    <li><b>الخصوصية الكاملة:</b> تغليف محايد تماماً لا يُظهر طبيعة المنتج، ودفع آمن، وتوصيل بلا أسئلة.</li>
+    <li><b>المقاسات الواقعية:</b> جداول مقاسات عربية واضحة ودعم واتساب لاختيار المقاس، لتقليل المرتجعات.</li>
+    <li><b>القيمة مقابل السعر:</b> جودة خامات تضاهي المستورد الفاخر بسعر متوسط.</li>
+  </ol>
+</div>
+
+<!-- ================= 2 السوق السعودي ================= -->
+<div class="section" id="s2">
+  <h2 class="sec-title">2. دراسة السوق السعودي للملابس الداخلية النسائية</h2>
+  <p class="lead">سوق الملابس الداخلية النسائية في السعودية جزء من سوق الملابس الداخلية والمنسوجات الذي يشهد نمواً مطرداً مدفوعاً بالتوسع في التجارة الإلكترونية وارتفاع دخل المرأة السعودية ودخولها سوق العمل.</p>
+  <div class="grid3">
+    <div class="stat"><div class="v">~2.5 مليار $</div><div class="l">تقدير حجم سوق الملابس الداخلية في السعودية (تقدير استرشادي 2024–2025)</div></div>
+    <div class="stat"><div class="v">6–8%</div><div class="l">معدل نمو سنوي مركب متوقع للقطاع</div></div>
+    <div class="stat"><div class="v">25–40%</div><div class="l">حصة التجارة الإلكترونية المتوقعة من مبيعات القطاع</div></div>
+  </div>
+  <p class="tbl-note">تنبيه: لا توجد إحصائية حكومية منشورة تفصل سوق الملابس الداخلية النسائية وحده؛ الأرقام أعلاه تقديرات مبنية على تقارير أسواق عالمية (Statista/Mordor Intelligence) ويجب تحديثها ببيانات رسمية عند توفرها.</p>
+
+  <h3>2.1 اتجاهات الشراء والاستهلاك</h3>
+  <ul>
+    <li>التحول الكبير نحو الشراء الإلكتروني بعد 2020، مع توقع استمراره.</li>
+    <li>تنامي الطلب على الملابس الداخلية المريحة (Wireless, Seamless) وخامات طبيعية.</li>
+    <li>أهمية المواسم: رمضان والعيد (هدايا وباقات)، موسم الزواج (تجهيز العرائس)، اليوم الوطني والتخفيضات الكبرى.</li>
+    <li>تأثير المؤثرات المحتويات المحلية على قرارات الشراء بشكل كبير.</li>
+  </ul>
+  <h3>2.2 سلوك المستهلكة السعودية</h3>
+  <ul>
+    <li><b>الفئة الأكثر شراءً:</b> 25–44 عاماً.</li>
+    <li><b>متوسط الإنفاق التقديري:</b> 200–400 ر.س سنوياً على الملابس الداخلية.</li>
+    <li><b>دوافع الشراء:</b> الراحة، جودة القماش، الخصوصية، سهولة الاستبدال، ثقة العلامة.</li>
+    <li><b>اعتراضات شائعة:</b> عدم ثقة بالمقاسات أونلاين، خوف من شفافية القماش، تردد في الدفع المسبق.</li>
+  </ul>
+  <h3>2.3 المدن الأكثر ملاءمة للإطلاق</h3>
+  <div class="tbl-scroll"><table>
+    <tr><th>المدينة</th><th>مستوى الطلب</th><th>لماذا؟</th></tr>
+    <tr><td>الرياض</td><td>مرتفع جداً</td><td>أكبر سكاناً وإنفاقاً، مركز التجارة الإلكترونية</td></tr>
+    <tr><td>جدة</td><td>مرتفع</td><td>وعي أزيائي مرتفع وقبول مبكر للعلامات الجديدة</td></tr>
+    <tr><td>الدمام / الخبر</td><td>مرتفع</td><td>كثافة سكانية وقوة شرائية بالمنطقة الشرقية</td></tr>
+    <tr><td>مكة المكرمة</td><td>متوسط–مرتفع</td><td>طلب موسمي قوي + سكان محليون</td></tr>
+    <tr><td>المدينة المنورة</td><td>متوسط</td><td>نمو مستمر في التسوق الإلكتروني</td></tr>
+  </table></div>
+  <h3>2.4 الفجوات والفرص</h3>
+  <div class="grid2">
+    <div class="box"><b>فجوة الجودة–السعر:</b> معظم اللاعبين إما رخيص بجودة ضعيفة أو فاخر بأسعار مرتفعة؛ المساحة الذهبية بينهما شبه شاغرة.</div>
+    <div class="box"><b>فجوة المقاسات:</b> ضعف التخصص في المقاسات الكبيرة والحمل في المتاجر المحلية.</div>
+    <div class="box"><b>فجوة الخصوصية:</b> قلة من يتعامل مع التغليف والتوصيل بسرية تامة كوعد تسويقي صريح.</div>
+    <div class="box"><b>فجوة المحتوى التعليمي:</b> محتوى عربي راقٍ يشرح الخامات والمقاسات شبه معدوم مقارنة بالطلب.</div>
+  </div>
+  <h3>2.5 التحديات والمخاطر السوقية</h3>
+  <ul>
+    <li>منافسة علامات راسخة (Nayomi وغيرها) بميزانيات تسويق كبيرة.</li>
+    <li>حساسية المحتوى الإعلاني لمنتجات الملابس الداخلية — تتطلب التزاماً صارماً بسياسات المنصات والآداب العامة.</li>
+    <li>ارتفاع تكاليف الاستحواذ على العميل (CAC) في السوق السعودي.</li>
+  </ul>
+</div>
+
+<!-- ================= 3 الكتالوج ================= -->
+<div class="section" id="s3">
+  <h2 class="sec-title">3. التشكيلة التجارية المقترحة (20+ منتجاً)</h2>
+  <p class="lead">أسعار الشراء تقديرية بالدولار لطلبات 500–1,000 قطعة (Private Label)، وسعر البيع يشمل هامشاً إجمالياً مستهدفاً 55–65% قبل المصاريف التشغيلية.</p>
+  <div class="tbl-scroll"><table>
+    <tr><th>#</th><th>المنتج</th><th>الخامة</th><th>الفئة المستهدفة</th><th>المقاسات</th><th>تكلفة تقديرية</th><th>سعر البيع (ر.س)</th><th>الأولوية</th></tr>
+    <tr><td>1</td><td>سروال قطني يومي كلاسيك</td><td>قطن 95% + إيلاستين</td><td>الجميع</td><td>S–XXL</td><td class="num">$0.45–0.85</td><td class="num">29–42</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>2</td><td>سروال بدون خياطة Seamless</td><td>نايلون/سباندكس محبوك</td><td>18–35</td><td>موحد S–L</td><td class="num">$0.60–1.05</td><td class="num">35–49</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>3</td><td>سروال عالي الخصر مشدّ خفيف</td><td>مايكروفايبر + دانتيل</td><td>30+</td><td>M–XXL</td><td class="num">$0.75–1.25</td><td class="num">33–45</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>4</td><td>سروال متوسط الخصر</td><td>قطن عضوي</td><td>الجميع</td><td>S–XXL</td><td class="num">$0.60–1.00</td><td class="num">42–59</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>5</td><td>سروال منخفض الخصر</td><td>مايكروفايبر</td><td>18–30</td><td>S–XL</td><td class="num">$0.55–0.90</td><td class="num">29–42</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>6</td><td>سروال مودال حريري الملمس</td><td>مودال</td><td>25–45</td><td>S–XXL</td><td class="num">$0.70–1.10</td><td class="num">36–52</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>7</td><td>سروال ألياف الخيزران</td><td>بامبو</td><td>ذوات البشرة الحساسة</td><td>S–XL</td><td class="num">$0.75–1.20</td><td class="num">39–59</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>8</td><td>سروال دانتيل أمامي مبطّن قطن</td><td>دانتيل + قطن</td><td>25–40</td><td>S–XL</td><td class="num">$0.85–1.40</td><td class="num">42–65</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>9</td><td>سروال يومي بكرسي قطني 100%</td><td>قطن مصري</td><td>الجميع</td><td>S–XXXL</td><td class="num">$0.55–0.95</td><td class="num">39–55</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>10</td><td>حمالة صدر يومية بلا أسلاك</td><td>قطن + سباندكس</td><td>الجميع</td><td>70A–90D</td><td class="num">$1.10–1.85</td><td class="num">52–79</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>11</td><td>حمالة تي-شير سلسة</td><td>نايلون/سباندكس</td><td>18–35</td><td>S–XL</td><td class="num">$1.20–1.95</td><td class="num">72–105</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>12</td><td>حمالة ناعمة بدون حمالات كتف قابلة للإزالة</td><td>ميكرو + دانتيل</td><td>25–40</td><td>70B–85D</td><td class="num">$1.30–2.05</td><td class="num">76–115</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>13</td><td>حمالة غير مرئية بأسلاك منخفضة</td><td>ميكرو ناعم</td><td>مناسبات</td><td>75B–90D</td><td class="num">$1.35–2.15</td><td class="num">65–95</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>14</td><td>حمالة مقاسات كبيرة دعم كامل</td><td>قطن + شبك داعم</td><td>+90 / كبيرات</td><td>90C–110E</td><td class="num">$1.70–2.60</td><td class="num">105–155</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>15</td><td>حمالة رياضية خفيفة يومية (داخلية)</td><td>سباندكس عالي</td><td>18–35</td><td>S–XL</td><td class="num">$1.15–1.90</td><td class="num">69–99</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>16</td><td>طقم سروال + حمالة متناسق</td><td>حسب الطقم</td><td>هدايا/عرائس</td><td>S–XXL</td><td class="num">$1.95–3.10</td><td class="num">119–179</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>17</td><td>طقم 3 سراويل قطنية</td><td>قطن</td><td>الجميع</td><td>S–XXL</td><td class="num">$1.35–2.10</td><td class="num">79–115</td><td><span class="badge g">إطلاق</span></td></tr>
+    <tr><td>18</td><td>سروال حمل داعم ناعم</td><td>قطن عضوي</td><td>حوامل</td><td>M–XXL</td><td class="num">$0.95–1.50</td><td class="num">65–95</td><td><span class="badge p">مرحلة 3</span></td></tr>
+    <tr><td>19</td><td>حمالة رضاعة أمومة</td><td>قطن + مشبك أمامي</td><td>أمهات</td><td>75C–95E</td><td class="num">$1.50–2.40</td><td class="num">89–135</td><td><span class="badge p">مرحلة 3</span></td></tr>
+    <tr><td>20</td><td>سروال دورة شهيرة واقٍ (بطانة ماصة)</td><td>قطن + طبقة ماصة معتمدة</td><td>جميع الأعمار</td><td>S–XXL</td><td class="num">$1.20–2.00</td><td class="num">79–119</td><td><span class="badge p">مرحلة 3*</span></td></tr>
+    <tr><td>21</td><td>سروال شبك (MESH) مبطن</td><td>ميش + قطن</td><td>25–40</td><td>S–XL</td><td class="num">$0.90–1.45</td><td class="num">45–69</td><td><span class="badge p">مرحلة 2</span></td></tr>
+  </table></div>
+  <p class="tbl-note">* منتجات الحيض تتطلب اختبارات امتصاص وسلامة معتمدة (مثل OEKO-TEX) قبل البيع — انظر قسم المخاطر. جميع الأسعار تقديرية وتتغير حسب الخامة والكمية والتخصيص.</p>
+</div>
+
+<!-- ================= 4 الخامات ================= -->
+<div class="section" id="s4">
+  <h2 class="sec-title">4. دراسة الأقمشة والخامات</h2>
+  <div class="tbl-scroll"><table>
+    <tr><th>الخامة</th><th>الراحة</th><th>التهوية</th><th>امتصاص الرطوبة</th><th>ملاءمة الطقس السعودي</th><th>العمر الافتراضي</th><th>التكلفة</th><th>أفضل استخدام</th></tr>
+    <tr><td>القطن الطبيعي</td><td>ممتازة</td><td>ممتازة</td><td>عالية</td><td>ممتازة ★★★★★</td><td>طويل</td><td>منخفضة–متوسطة</td><td>يومي، حساسية</td></tr>
+    <tr><td>القطن العضوي</td><td>ممتازة</td><td>ممتازة</td><td>عالية</td><td>ممتازة ★★★★★</td><td>طويل</td><td>متوسطة</td><td>أمومة، فئة واعية</td></tr>
+    <tr><td>المودال</td><td>ممتازة (أنعم من القطن)</td><td>جيدة جداً</td><td>عالية جداً</td><td>ممتازة ★★★★★</td><td>متوسط–طويل</td><td>متوسطة</td><td>يومي فاخر</td></tr>
+    <tr><td>ألياف الخيزران</td><td>ممتازة</td><td>جيدة جداً</td><td>عالية + مضاد للبكتيريا</td><td>جيدة–ممتازة ★★★★</td><td>متوسط</td><td>متوسطة–مرتفعة</td><td>حساسية، صيف</td></tr>
+    <tr><td>المايكروفايبر</td><td>جيدة جداً (ناعم جداً)</td><td>متوسطة</td><td>منخفضة (تجف سريعاً)</td><td>جيدة ★★★</td><td>متوسط</td><td>منخفضة–متوسطة</td><td>سلس، أناقة</td></tr>
+    <tr><td>البولي أميد (نايلون)</td><td>جيدة</td><td>منخفضة–متوسطة</td><td>منخفضة</td><td>متوسطة ★★</td><td>طويل</td><td>منخفضة</td><td>دانتيل، شبك</td></tr>
+    <tr><td>الإيلاستين/السباندكس</td><td colspan="6">مادة داعمة تُضاف 5–20% لأي خامة للمرونة والثبات</td><td>جميع الأنواع</td></tr>
+    <tr><td>الدانتيل</td><td>متوسطة</td><td>جيدة (مفتوح)</td><td>—</td><td>جيدة</td><td>متوسط (حسب الجودة)</td><td>متوسطة–مرتفعة</td><td>أنوثة، طقم عرائس</td></tr>
+    <tr><td>الميش (Mesh)</td><td>جيدة</td><td>ممتازة</td><td>—</td><td>جيدة جداً ★★★★</td><td>متوسط</td><td>متوسطة</td><td>تفاصيل، أطراف</td></tr>
+    <tr><td>الأقمشة غير الملحومة (Seamless)</td><td>ممتازة (لا احتكاك)</td><td>جيدة</td><td>متوسطة</td><td>جيدة جداً ★★★★</td><td>متوسط</td><td>متوسطة</td><td>تحت الملابس الضيقة</td></tr>
+  </table></div>
+  <div class="box highlight"><b>توصية الخامات للمرحلة الأولى:</b> (1) قطن 95/5 لليومي، (2) مودال للفئة الراقية، (3) نايلون/سباندكس للسلس Seamless، (4) دانتيل جودة فرنسية/تركية للطقم العرائسي فقط. طلب شهادة OEKO-TEX Standard 100 لجميع الخامات الملامسة للبشرة.</div>
+</div>
+
+<!-- ================= 5 الموردون ================= -->
+<div class="section" id="s5">
+  <h2 class="sec-title">5. المصانع والموردون الدوليون (30+)</h2>
+  <p class="lead warn">تنبيه شفافية: الأسماء أدناه مورّدون معروفون فعلياً في قطاع الملابس الداخلية (قائمة العميل + بحوث سابقة). بيانات التواصل الدقيقة (هاتف/واتساب) لم تُتحقق مباشرة في هذه الجلسة — يجب التأكد منها عبر الموقع الرسمي لكل مورد. أي خانة غير موثقة موسومة «غير متاح علناً».</p>
+  <h3>5.1 قائمة الموردين المرشحين</h3>
+  <div class="tbl-scroll"><table>
+    <tr><th>المورد</th><th>الدولة/المدينة</th><th>النوع</th><th>Private Label</th><th>MOQ تقريبي</th><th>ملاحظات</th></tr>
+    <tr><td><b>Aynuz</b> — aynuz.com</td><td>تركيا/إسطنبول</td><td>مصنع/تجاري</td><td>نعم</td><td>منخفض نسبياً</td><td>سبق التواصل؛ أسعار أولية 0.20–1.50$/قطعة (تتطلب تحديثاً رسمياً)</td></tr>
+    <tr><td>TOLIN</td><td>تركيا</td><td>مصنع راسخ</td><td>نعم</td><td>1,000+</td><td>جودة عالية، أسعار مرتفعة نسبياً</td></tr>
+    <tr><td>ANIT</td><td>تركيا</td><td>مصنع</td><td>نعم</td><td>1,000+</td><td>خبرة تصدير</td></tr>
+    <tr><td>ŞADEN</td><td>تركيا</td><td>مصنع</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>Ayışığı Tekstil</td><td>تركيا</td><td>مصنع</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>مصانع تركية إضافية*</td><td>إسطنبول/بورصة/عمرانية</td><td>—</td><td>—</td><td>—</td><td>*تُضاف بعد التواصل المباشر</td></tr>
+    <tr><td>Shantou Rongchang</td><td>الصين/شانتو</td><td>مصنع</td><td>نعم</td><td>1,000–3,000</td><td>تخصص سلس</td></tr>
+    <tr><td>Zhongshan Nicety</td><td>الصين/تشونغشان</td><td>مصنع</td><td>نعم</td><td>1,000+</td><td>—</td></tr>
+    <tr><td>Shenzhen Grace Underwear</td><td>الصين/شنتشن</td><td>مصنع</td><td>نعم</td><td>500+</td><td>—</td></tr>
+    <tr><td>YSTAR Wear</td><td>الصين</td><td>مصنع</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>Sanhui Underwear</td><td>الصين</td><td>مصنع</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>Sino Finetex</td><td>الصين</td><td>مصنع</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>Anhui Milano Trading</td><td>الصين</td><td>تجاري</td><td>نعم</td><td>منخفض</td><td>مناسب للبدايات</td></tr>
+    <tr><td>Guangzhou Ruby Fashion</td><td>الصين/قوانغتشو</td><td>مصنع/تجاري</td><td>نعم</td><td>غير متاح علناً</td><td>—</td></tr>
+    <tr><td>Yiwu Sunspice</td><td>الصين/ييوو</td><td>تجاري</td><td>نعم</td><td>منخفض</td><td>تنوع واسع</td></tr>
+    <tr><td>Yiwu Zhang Ying Min</td><td>الصين/ييوو</td><td>تجاري</td><td>نعم</td><td>منخفض</td><td>—</td></tr>
+    <tr><td>موردون عبر Alibaba (مصنّعون موثّقون)</td><td>الصين/بنغلاديش/باكستان</td><td>منصة B2B</td><td>نعم</td><td>متفاوت</td><td>التحقق عبر Trade Assurance + فحص SGS</td></tr>
+    <tr><td>Made-in-China مصنّعون موثّقون</td><td>الصين</td><td>منصة B2B</td><td>نعم</td><td>متفاوت</td><td>—</td></tr>
+    <tr><td>موردون لبنانيون**</td><td>لبنان/بيروت-الضاحية</td><td>مصانع صغيرة–متوسطة</td><td>نعم</td><td>منخفض</td><td>**يتطلبون تحققاً ميدانياً؛ القدرة التصديرية محدودة</td></tr>
+    <tr><td>مصانع بنغلاديش (دكا/تشيتاغونغ)</td><td>بنغلاديش</td><td>مصانع كبرى</td><td>نعم (OEM)</td><td>5,000+</td><td>أرخص تكلفة، جودة تتطلب إشرافاً</td></tr>
+    <tr><td>مصانع تيروبور/دلهي</td><td>الهند</td><td>مصانع</td><td>نعم</td><td>2,000+</td><td>قطن ممتاز، تكلفة منخفضة</td></tr>
+    <tr><td>مصانع لاهور/فيصل آباد</td><td>باكستان</td><td>مصانع</td><td>نعم</td><td>1,000+</td><td>قطن عضوي متوفر</td></tr>
+    <tr><td>مصانع فيتنام (هانوي/هوشي منه)</td><td>فيتنام</td><td>مصانع</td><td>نعم</td><td>3,000+</td><td>جودة جيدة، تكلفة متوسطة</td></tr>
+    <tr><td>مصانع جاوة (باندونغ/سورابايا)</td><td>إندونيسيا</td><td>مصانع</td><td>نعم</td><td>1,000+</td><td>خامات مدارية مناسبة</td></tr>
+  </table></div>
+  <p class="tbl-note">الحد الأدنى من القائمة: 15 مورداً من تركيا/الصين/لبنان مجتمعة حسب المطلوب، مع باقي الدول كخيارات مقارنة.</p>
+  <h3>5.2 مقارنة أسعار الموردين (تقديرية، لسراويل قطنية)</h3>
+  <table class="fin">
+    <tr><th>المستوى</th><th>100 قطعة</th><th>500 قطعة</th><th>1,000 قطعة</th><th>5,000 قطعة</th></tr>
+    <tr><td>اقتصادي (بنغلاديش/باكستان)</td><td class="num">$0.9–1.2</td><td class="num">$0.65–0.85</td><td class="num">$0.55–0.75</td><td class="num">$0.40–0.60</td></tr>
+    <tr><td>متوسط (الصين)</td><td class="num">$1.2–1.6</td><td class="num">$0.85–1.15</td><td class="num">$0.70–0.95</td><td class="num">$0.50–0.75</td></tr>
+    <tr><td>مرتفع (تركيا)</td><td class="num">$1.7–2.4</td><td class="num">$1.35–1.90</td><td class="num">$1.10–1.55</td><td class="num">$0.85–1.25</td></tr>
+  </table>
+  <p class="tbl-note">تحويل تقريبي: 1$ = 3.75 ر.س (مثال: $1.20 ≈ 4.5 ر.س). السعر يتغير حسب القماش والتصميم والتغليف والتخصيص؛ سعر العينة ليس سعر الجملة.</p>
+  <h3>5.3 مصفوفة اختيار المورد</h3>
+  <table>
+    <tr><th>المعيار</th><th>الوزن</th><th>تركيا</th><th>الصين</th><th>بنغلاديش/باكستان</th></tr>
+    <tr><td>الجودة</td><td>25%</td><td>★★★★★</td><td>★★★★</td><td>★★★</td></tr>
+    <tr><td>السعر</td><td>25%</td><td>★★★</td><td>★★★★</td><td>★★★★★</td></tr>
+    <tr><td>MOQ منخفض</td><td>15%</td><td>★★★★</td><td>★★★</td><td>★★</td></tr>
+    <tr><td>سرعة التصنيع والشحن</td><td>15%</td><td>★★★★★</td><td>★★★</td><td>★★★</td></tr>
+    <tr><td>سهولة التواصل والعينات</td><td>10%</td><td>★★★★★</td><td>★★★</td><td>★★★</td></tr>
+    <tr><td>تنوع التخصيص Private Label</td><td>10%</td><td>★★★★</td><td>★★★★★</td><td>★★★</td></tr>
+  </table>
+  <div class="box green"><b>الخلاصة:</b> للمرحلة الأولى يُوصى بـ <b>تركيا (Aynuz + بدائل)</b> كمصدر رئيسي للجودة والسرعة مع MOQ منخفض، مع <b>الصين</b> كمصدر ثانٍ للسلس Seamless والتغليف المخصص عند رفع الكميات.</div>
+</div>
+
+
+  <h3>5.4 منافذ الشراء في السوق التركي</h3>
+  <p>إلى جانب التعامل المباشر مع المصانع، توجد في تركيا منافذ شراء متعددة تناسب مراحل مختلفة من المشروع:</p>
+  <h4>أ) أسواق الجملة المباشرة (شراء جاهز أو بتخصيص بسيط)</h4>
+  <div class="tbl-scroll"><table>
+    <tr><th>المنفذ</th><th>الموقع</th><th>التخصص</th><th>طريقة الشراء</th><th>ملاحظات للمشروع</th></tr>
+    <tr><td><b>لاليه Laleli</b></td><td>إسطنبول</td><td>جملة ملابس داخلية ومنسوجات</td><td>شراء جاهز من المعارض أو تخصيص بعلامتك</td><td>حد أدنى منخفض، مناسب لاختبار السوق قبل التصنيع الخاص</td></tr>
+    <tr><td><b>عثمان بيه Osmanbey</b></td><td>إسطنبول (شيشلي)</td><td>جملة أقمشة وملابس داخلية وإكسسوارات</td><td>اختيار الموديلات من كتالوجات المعارض</td><td>تجار جملة يرتبطون بمصانع — قناة ممتازة للتفاوض على Private Label صغير</td></tr>
+    <tr><td><b>ميرتر Merter</b></td><td>إسطنبول</td><td>جملة ملابس ومصانع خلفية</td><td>شراء مباشر أو توجيهك للمصنع</td><td>أسعار تنافسية، جودة متفاوتة — الفحص ضروري</td></tr>
+    <tr><td><b>زيتين بورنو Zeytinburnu</b></td><td>إسطنبول</td><td>منطقة صناعية ومعارض مباشرة</td><td>تعامل مباشر مع مصانع التريكو والسلس</td><td>مناسب لخامات السلس والقطن المحبوك</td></tr>
+    <tr><td><b>محمود باشا / تحت كله Mahmutpaşa &amp; Tahtakale</b></td><td>إسطنبول</td><td>تغليف، علب، أكياس، إكسسوارات</td><td>شراء فوري بالقطعة الصغيرة</td><td>مصدر ممتاز لعينات التغليف بأسعار منخفضة قبل الإنتاج الكمي</td></tr>
+    <tr><td><b>المناطق الصناعية ببورصة</b></td><td>بورصة (أوسمان غازي وعمرانية)</td><td>مصانع ملابس داخلية منظمة (OSB)</td><td>تصنيع Private Label / OEM مباشر</td><td>جودة تركية أصيلة وتجربة تصدير واسعة</td></tr>
+  </table></div>
+  <h4>ب) المنصات والجهات الرسمية للوصول للموردين</h4>
+  <div class="tbl-scroll"><table>
+    <tr><th>القناة</th><th>الوصف</th><th>كيف تستفيد</th></tr>
+    <tr><td><b>TurkishExporter.net</b> و<b>turkishexporter.net</b></td><td>البوابتان الرسميتان لمجلس المصدرين الأتراك TİM</td><td>قاعدة مصدّرين موثقة بحسب المنتج — اطلب عروض أسعار من 5–10 مصدّرين معتمدين</td></tr>
+    <tr><td><b>İDDMİB</b></td><td>مجلس مصدّري الملابس الجاهزة والمنسوجات</td><td>قوائم المصانع المتخصصة والمشاركة في البعثات التجارية</td></tr>
+    <tr><td><b>Alibaba.com (فلتر: Turkey)</b></td><td>موردون أتراك بشهادات تحقق</td><td>مقارنة سريعة + Trade Assurance للدفع الآمن</td></tr>
+    <tr><td><b>TradeKey / Go4WorldBusiness (فلتر تركيا)</b></td><td>منصات B2B إضافية</td><td>توسيع دائرة المفاضلة والحصول على عروض أسعار إضافية</td></tr>
+    <tr><td><b>معارض: Interfilière Istanbul</b></td><td>معرض متخصص بالملابس الداخلية</td><td>لقاء 20–30 مصنعاً وجهاً لوجه في زيارة واحدة</td></tr>
+    <tr><td><b>معرض Evteks (إسطنبول)</b></td><td>معرض الأقمشة والمنسوجات</td><td>اختيار الخامات والتعامل مباشرة مع مورّدي الأقمشة</td></tr>
+    <tr><td><b>معرض IF Wedding Fashion (إزمير)</b></td><td>أزياء الأعراس</td><td>مصانع طقم العرائس والدانتيل الفاخر</td></tr>
+    <tr><td><b>مكاتب الفحص والشراء في إسطنبول</b> (SGS Türkiye، Bureau Veritas، مكاتب شراء محلية)</td><td>فحص الجودة قبل الشحن وتمثيلك في المفاوضات</td><td>شرط حماية أساسي: فحص عشوائي 10–20% قبل دفع بقية المبلغ</td></tr>
+  </table></div>
+  <div class="box"><b>قواعد التعامل في السوق التركي:</b> (1) دفع 30% مقدم و70% بعد فحص الشحنة، (2) عقد بالإنجليزية بمواصفات الخامة والمقاسات والغسيل، (3) طلب شهادة منشأ تركية للاستفادة من ترتيبات التبادل التجاري مع دول الخليج، (4) زيارة واحدة لإسطنبول (3–4 أيام: لاليه + عثمان بيه + 2 مصنع) توفر عليك شهوراً من المراسلات.</div>
+</div>
+
+<!-- ================= 6 التكاليف ================= -->
+<div class="section" id="s6">
+  <h2 class="sec-title">6. تكلفة التأسيس والاستثمار (ثلاثة سيناريوهات)</h2>
+  <p class="lead">الميزانيات المعتمدة: الموقع الإلكتروني 700$ لمرة واحدة، التسويق 400$/شهر، إنتاج 30 مقطع Reels شهرياً. الاحتياطي 15%.</p>
+  <table class="fin">
+    <tr><th>البند</th><th>السيناريو الاقتصادي</th><th>السيناريو المتوسط</th><th>السيناريو الاحترافي</th></tr>
+    <tr><td>عدد القطع الأولية</td><td class="num">800</td><td class="num">2,000</td><td class="num">4,500</td></tr>
+    <tr><td>متوسط تكلفة القطعة FOB</td><td class="num">$0.88 / 3.3 ر.س</td><td class="num">$0.95 / 3.6 ر.س</td><td class="num">$1.90 / 7.1 ر.س</td></tr>
+    <tr><td>شراء البضاعة</td><td class="num">$700</td><td class="num">$1,900</td><td class="num">$8,550</td></tr>
+    <tr><td>العينات والشحن الجوي للعينات</td><td class="num">$190</td><td class="num">$350</td><td class="num">$700</td></tr>
+    <tr><td>الشحن الدولي (بحري/جزئي)</td><td class="num">$210</td><td class="num">$480</td><td class="num">$1,400</td></tr>
+    <tr><td>جمارك وتخليص (تقديري 10–15%)</td><td class="num">$105</td><td class="num">$340</td><td class="num">$1,480</td></tr>
+    <tr><td>تغليف داخلي وخارجي (3 مواد)</td><td class="num">$250</td><td class="num">$600</td><td class="num">$2,000</td></tr>
+    <tr><td>هوية بصرية (دليل استخدام + قوالب)</td><td class="num">$240</td><td class="num">$500</td><td class="num">$1,200</td></tr>
+    <tr><td>الموقع الإلكتروني (معتمد)</td><td class="num">$700</td><td class="num">$700</td><td class="num">$700</td></tr>
+    <tr><td>الدومين ومنصة التجارة (سنة)</td><td class="num">$110</td><td class="num">$200</td><td class="num">$500</td></tr>
+    <tr><td>تصوير المنتجات (جلسة احترافية)</td><td class="num">$180</td><td class="num">$400</td><td class="num">$1,100</td></tr>
+    <tr><td>تسويق وإعلانات (شهران)</td><td class="num">$790</td><td class="num">$800</td><td class="num">$1,600</td></tr>
+    <tr><td>إنتاج محتوى Reels (شهران)</td><td class="num">$540</td><td class="num">$432</td><td class="num">$1,500</td></tr>
+    <tr><td>خدمة عملاء وأدوات (3 أشهر)</td><td class="num">$161</td><td class="num">$400</td><td class="num">$600</td></tr>
+    <tr><td>احتياطي طوارئ (15%)</td><td class="num">$656</td><td class="num">$1,050</td><td class="num">$3,290</td></tr>
+    <tr style="background:#f0e6e0;font-weight:700"><td>إجمالي رأس المال</td><td class="num">$5,032 ≈ 18,872.30 ر.س</td><td class="num">$8,052 ≈ 30,195.68 ر.س</td><td class="num">$24,620 ≈ 92,300 ر.س</td></tr>
+  </table>
+  <h3>6.1 اقتصاديات الوحدة (السيناريو المتوسط)</h3>
+  <table class="fin">
+    <tr><th>البند</th><th>القيمة</th><th>ملاحظة</th></tr>
+    <tr><td>تكلفة القطعة FOB</td><td class="num">3.6 ر.س</td><td>—</td></tr>
+    <tr><td>+ شحن وجمارك وتوزيع (للقطعة)</td><td class="num">1.4 ر.س</td><td>~40%</td></tr>
+    <tr><td>= تكلفة وصول القطعة للمخزن</td><td class="num"><b>5.0 ر.س</b></td><td>—</td></tr>
+    <tr><td>سعر البيع المتوسط</td><td class="num">16.5 ر.س</td><td>بمتوسط سلة 120 ر.س</td></tr>
+    <tr><td>هامش الربح الإجمالي</td><td class="num">~70%</td><td>ليست ربحاً صافياً</td></tr>
+    <tr><td>المصاريف الشهرية التشغيلية</td><td class="num">3,500–5,000 ر.س</td><td>تسويق+شحن+خدمة عملاء+أدوات</td></tr>
+    <tr><td>نقطة التعادل</td><td class="num">~190–230 طلباً/شهر</td><td>بمتوسط سلة 120 ر.س</td></tr>
+    <tr><td>صافي الربح المتوقع (شهر مستقر)</td><td class="num">4,000–9,000 ر.س</td><td>حسب الحجم</td></tr>
+    <tr><td>فترة استرداد رأس المال</td><td class="num">8–14 شهراً</td><td>—</td></tr>
+  </table>
+  <p class="tbl-note">الإيرادات ≠ الأرباح، والهامش الإجمالي ≠ صافي الربح. جميع الافتراضات قابلة للتعديل في النموذج المالي.</p>
+</div>
+
+<!-- ================= 7 المنافسون ================= -->
+<div class="section" id="s7">
+  <h2 class="sec-title">7. تحليل المنافسين في السوق السعودي</h2>
+  <h3>7.1 الجدول التحليلي</h3>
+  <div class="tbl-scroll"><table>
+    <tr><th>المنافس</th><th>التخصص</th><th>مستوى الأسعار</th><th>نقاط القوة</th><th>نقاط الضعف / الفرص أمامنا</th></tr>
+    <tr><td><b>Nayomi</b><br>int.nayomi.com</td><td>ملابس داخلية + نوم</td><td>متوسط–مرتفع</td><td>علامة راسخة إقليمياً، متابعون كثر (تُقدر الملاحظة الأولية ~1.2M — يجب التحقق لحظة الإعداد)، عروض وتنوع</td><td>ليست متخصصة حصرياً؛ تجربة تشبه المتاجر الكبرى — نتفوق بالتخصص والقرب والمحتوى التعليمي</td></tr>
+    <tr><td><b>Hawa</b><br>hawa.co</td><td>ملابس داخلية + نوم</td><td>متوسط</td><td>محتوى مرئي نشط (~27K أولياً)</td><td>تنوع المنتجات يشتت — نتفوق بالحصرية</td></tr>
+    <tr><td><b>Rose Lingerie</b><br>roselingerie.net</td><td>ملابس داخلية</td><td>متوسط</td><td>تركيز على الفئة (~13.7K أولياً)</td><td>اعتماد كبير على الصور الثابتة — نتفوق بالفيديو والتفاعل</td></tr>
+    <tr><td><b>Manar</b><br>manar.sa</td><td>أزياء نسائية عامة</td><td>منخفض–متوسط</td><td>موقع سهل وبسيط وفق الملاحظة الأولية</td><td>ليست متخصصة داخلية — نتفوق بعمق الفئة</td></tr>
+    <tr><td><b>Jasmine</b><br>jasmine.com.sa</td><td>أزياء نسائية</td><td>متوسط</td><td>كتالوج منظم (~11.7K أولياً)</td><td>تنوع عام — نتفوق بالتخصص والمقاسات الكبيرة</td></tr>
+  </table></div>
+  <p class="tbl-note">أعداد المتابعين أرقام أولية قدمها صاحب المشروع ولم تُتحقق في هذه الجلسة — يجب تحديثها يوم الإطلاق. لا تتوفر بيانات مبيعات علنية موثوقة لهذه العلامات.</p>
+  <h3>7.2 مقارنة تجربة المواقع الإلكترونية</h3>
+  <table class="fin">
+    <tr><th>المعيار</th><th>Nayomi</th><th>Hawa</th><th>Rose</th><th>Manar</th><th>Jasmine</th></tr>
+    <tr><td>سهولة الطلب</td><td>جيد</td><td>جيد</td><td>متوسط</td><td>ممتاز</td><td>جيد</td></tr>
+    <tr><td>تجربة الجوال</td><td>جيدة</td><td>جيدة</td><td>متوسطة</td><td>جيدة</td><td>جيدة</td></tr>
+    <tr><td>وضوح المقاسات</td><td>جيد</td><td>متوسط</td><td>متوسط</td><td>جيد</td><td>متوسط</td></tr>
+    <tr><td>تنوع الدفع</td><td>عالٍ</td><td>عالٍ</td><td>متوسط</td><td>عالٍ</td><td>متوسط</td></tr>
+  </table>
+  <p><b>أفضل تجربة شراء (بناءً على الملاحظات الأولية):</b> Manar من حيث البساطة وسرعة إتمام الطلب — ومع ذلك فإن الفائز الحقيقي سيكون من يجمع البساطة مع تخصص فئة + تغليف خاص + تواصل واتساب للمقاسات: وهذا موقعنا التنافسي.</p>
+  <h3>7.3 مقارنة الحضور الاجتماعي</h3>
+  <ul>
+    <li><b>Instagram/TikTok:</b> Nayomi الأقوى حضوراً؛ Hawa نشط بالفيديو؛ Rose يعتمد الصور الثابتة.</li>
+    <li><b>الفرص:</b> محتوى Reels تعليمي راقٍ شبه غائب عن الجميع — مساحتنا الأوضح.</li>
+    <li><b>العروض:</b> الجميع يعتمد التخفيضات الموسمية؛ لا أحد يبني باقات اشتراك أو ولاء.</li>
+  </ul>
+</div>
+
+<!-- ================= 8 الهوية ================= -->
+<div class="section" id="s8">
+  <h2 class="sec-title">8. الهوية البصرية للعلامة التجارية</h2>
+  <div class="grid2">
+    <div class="box">
+      <h4>لوحة الألوان</h4>
+      <p><span style="display:inline-block;width:22px;height:22px;background:#faf7f2;border:1px solid #ccc;vertical-align:middle"></span> عاجي #FAF7F2 — خلفيات</p>
+      <p><span style="display:inline-block;width:22px;height:22px;background:#e8ddcf;vertical-align:middle"></span> بيج #E8DDCF — عناصر ثانوية</p>
+      <p><span style="display:inline-block;width:22px;height:22px;background:#c98a8a;vertical-align:middle"></span> وردي هادئ #C98A8A — لمسات</p>
+      <p><span style="display:inline-block;width:22px;height:22px;background:#8a7f74;vertical-align:middle"></span> رمادي دافئ #8A7F74 — نصوص مساعدة</p>
+      <p><span style="display:inline-block;width:22px;height:22px;background:#3d3630;vertical-align:middle"></span> بني داكن #3D3630 — نصوص رئيسية</p>
+    </div>
+    <div class="box">
+      <h4>الخطوط</h4>
+      <p><b>العربية:</b> IBM Plex Sans Arabic / Noto Kufi Arabic — للعناوين والنصوص.</p>
+      <p><b>الأرقام والإنجليزية:</b> Montserrat — للأسعار والمقاسات.</p>
+    </div>
+  </div>
+  <h3>شخصية العلامة ونبرة الكلام</h3>
+  <ul>
+    <li><b>شخصية العلامة:</b> صديقة خبيرة — مثل صديقة تفهم احتياجك وتنصحك بثقة، لا متجر يبيع.</li>
+    <li><b>النبرة:</b> دافئة، محترمة، بسيطة، بلا مصطلحات معقدة، دائماً «نحن معكِ».</li>
+    <li><b>مبادئ الكتابة:</b> جمل قصيرة، تركيز على الراحة والخصوصية، تجنب الإيحاءات تماماً، استخدام «أنتِ/مقاسكِ».</li>
+  </ul>
+  <h3>أسلوب التصوير والتصميم</h3>
+  <ul>
+    <li><b>تصوير المنتجات:</b> لقطات Flat Lay على خلفيات عاجية/بيج، إضاءة ناعمة طبيعية، تفاصيل الخامة والخياطة بالماكرو، ألوان المنتجات الفعلية دون فلاتر مبالغ فيها. <b>بدون عارضات.</b></li>
+    <li><b>الكتالوج:</b> شبكة منتظمّة، مساحات بيضاء واسعة، بطاقة كل منتج بخامتها ومقاساتها وشهادتها.</li>
+    <li><b>المنشورات:</b> قوالب بعناوين واضحة + رقم/فائدة واحدة في كل تصميم؛ أغلفة Reels بلون وردي/بيج مع عنوان كبير مقروء في أول ثانية.</li>
+    <li><b>العبوات:</b> علب صلبة بيج بشعار (عند اعتماده)، كيس شحن كرافت محايد تماماً بلا أي إيحاء — <b>الخصوصية جزء من التصميم.</b></li>
+    <li><b>الأيقونات:</b> خطية رفيعة بلون داكن (مقاس، خامة، شحن سريع، تغليف خاص).</li>
+  </ul>
+  <div class="box highlight"><b>ملاحظة:</b> وفقاً للتعليمات لم يُصمَّم أي شعار في هذه الدراسة؛ يُستكمل الشعار في مرحلة لاحقة ضمن دليل الهوية.</div>
+</div>
+
+<!-- ================= 9 البيع ================= -->
+<div class="section" id="s9">
+  <h2 class="sec-title">9. استراتيجية البيع داخل المملكة العربية السعودية</h2>
+  <div class="tbl-scroll"><table>
+    <tr><th>القناة</th><th>آلية العمل</th><th>التكلفة</th><th>المميزات</th><th>العيوب</th><th>الملاءمة</th></tr>
+    <tr><td>المتجر الإلكتروني الرسمي</td><td>Shopify/Salla مع بوابات مدى وApple Pay</td><td>700$ تأسيس + اشتراك شهري</td><td>تحكم كامل بالبيانات والهامش</td><td>يحتاج تسويقاً دائماً</td><td><span class="badge g">أساسية</span></td></tr>
+    <tr><td>Instagram Shopping</td><td>ربط الكتالوج عبر Meta Commerce</td><td>مجاني + إعلانات</td><td>شراء من داخل التطبيق</td><td>أهلية وقيود محتوى</td><td><span class="badge g">مرحلة 1</span></td></tr>
+    <tr><td>TikTok Shop</td><td>متجر داخل التطبيق</td><td>عمولة على المبيعات</td><td>انتشار ضخم للمحتوى</td><td>تتطلب ضبطاً صارماً للمحتوى</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>Snapchat Ads</td><td>إعلانات وعدسات</td><td>من 400$/شهر</td><td>وصول ممتاز بالسعودية</td><td>تكلفة استحواذ مرتفعة</td><td><span class="badge g">مرحلة 1</span></td></tr>
+    <tr><td>WhatsApp Business</td><td>كتالوج + ردود آلية + دعم المقاسات</td><td>مجاني–منخفض</td><td>خصوصية وثقة عالية</td><td>يدوي جزئياً</td><td><span class="badge g">أساسية</span></td></tr>
+    <tr><td>المنصات السعودية (نمشي/سلة/معارض إلكترونية)</td><td>قائمة منتجات ضمن منصات قائمة</td><td>عمولة 15–25%</td><td>جمهور جاهز</td><td>هامش أقل وتنازل هوية</td><td><span class="badge p">مرحلة 2</span></td></tr>
+    <tr><td>الجملة (بوتيكات/مشاغل)</td><td>بيع كرتوني 50–100 قطعة</td><td>هامش 30–40%</td><td>تصفية كميات وتدفق نقدي</td><td>أرباح أقل</td><td><span class="badge p">مرحلة 3</span></td></tr>
+    <tr><td>المؤثرات وصانعات المحتوى</td><td>عمولة أو إهداء بمراجعة</td><td>متغيرة</td><td>ثقة وانتشار سريع</td><td>مخاطر سمعة المحتوى</td><td><span class="badge g">منتقاة</span></td></tr>
+    <tr><td>باقات العرائس (داخلية فقط)</td><td>باقات 500–1,500 ر.س</td><td>—</td><td>قيمة سلة عالية وموسم زواج</td><td>موسمية</td><td><span class="badge g">مرحلة 2</span></td></tr>
+    <tr><td>برامج الولاء والإحالة</td><td>نقاط + خصم صديقة</td><td>منخفض</td><td>تكرار الشراء وCAC منخفض</td><td>يحتاج قاعدة عملاء أولاً</td><td><span class="badge p">بعد 3 أشهر</span></td></tr>
+  </table></div>
+  <div class="box"><b>الامتثال التنظيمي:</b> التسجيل في «معروف» (وزارة التجارة)، الالتزام بأنظمة حماية المستهلك (الإرجاع/الاستبدال وفق النظام)، شروط الخصوصية وسياسات الإعلانات في منصات التواصل، وعدم عرض محتوى مخالف للآداب العامة — هذا التزام تشغيلي أساسي لمنتجات هذه الفئة.</div>
+</div>
+
+<!-- ================= 10 التغليف ================= -->
+<div class="section" id="s10">
+  <h2 class="sec-title">10. مصانع التغليف والكرتون في السعودية</h2>
+  <p class="lead warn">لم تُتحقق قوائم التغليف محلياً في هذه الجلسة. فيما يلي نمط البحث المعتمد — يجب إتمام التواصل المباشر قبل التعاقد، وكتابة «غير متاح علناً» في أي خانة غير موثقة.</p>
+  <ul>
+    <li>البحث في دليل «Saudi Made» والغرف التجارية عن: علب هدايا صلبة، صناديق كرتون مغلفة، طباعة فلكسو/أوفست، أكياس كرافت.</li>
+    <li>موردو التغليف المعروفون في الرياض وجدة يقدمون طباعة حسب الطلب بحد أدنى 500–1,000 علبة؛ تكلفة العلبة الفاخرة التقديرية 3–8 ر.س حسب الحجم والطباعة.</li>
+    <li><b>اشتراطات التصميم:</b> طباعة داخلية بسيطة (شعار/رسالة شكر)، كيس خارجي كرافت محايد بلا أي بيانات تُفصح عن المحتوى، شريط لاصق بيج.</li>
+  </ul>
+</div>
+
+<!-- ================= 11 الشحن ================= -->
+<div class="section" id="s11">
+  <h2 class="sec-title">11. شركات التوصيل والخدمات اللوجستية</h2>
+  <table>
+    <tr><th>الشركة</th><th>التكلفة التقديرية</th><th>التغطية</th><th>الدفع عند الاستلام</th><th>المرتجعات</th><th>الربط الإلكتروني</th></tr>
+    <tr><td><b>SPL</b> (البريد السعودي)</td><td class="num">15–25 ر.س</td><td>شاملة جداً</td><td>نعم</td><td>جيدة</td><td>API ممتاز</td></tr>
+    <tr><td><b>SMSA Express</b></td><td class="num">18–30 ر.س</td><td>شاملة</td><td>نعم</td><td>جيدة</td><td>جيد</td></tr>
+    <tr><td><b>Aramex</b></td><td class="num">20–35 ر.س</td><td>شاملة + دولي</td><td>نعم</td><td>جيدة</td><td>جيد</td></tr>
+    <tr><td><b>iMile</b></td><td class="num">14–24 ر.س</td><td>مدن رئيسية</td><td>نعم</td><td>متوسطة</td><td>جيد</td></tr>
+    <tr><td><b>J&T Express</b></td><td class="num">13–22 ر.س</td><td>متوسطة–شاملة</td><td>نعم</td><td>متوسطة</td><td>جيد</td></tr>
+  </table>
+  <div class="box green"><b>أفضل ثلاثة خيارات للمشروع:</b> (1) <b>SPL</b> — التغطية الأوسع والالتزام الأعلى، (2) <b>iMile</b> — توازن السعر/الجودة، (3) <b>SMSA</b> — احتياطي للمدن والشحن السريع. التفاوض على أسعار حجم بعد تجاوز 300 شحنة/شهر. <b>شرط أساسي:</b> عبارة «محتويات شخصية» فقط على الطرد — لا يُذكر اسم المنتج أو المتجر بشكل يفصح عنه.</div>
+</div>
+
+<!-- ================= 12 التسويق ================= -->
+<div class="section" id="s12">
+  <h2 class="sec-title">12. استراتيجية التسويق الرقمي (3 أشهر)</h2>
+  <p class="lead">الميزانية المعتمدة: 400$ ≈ 1,500 ر.س شهرياً. توزيع مقترح لمشروع جديد:</p>
+  <div class="bar-row"><div class="lbl">Instagram / Meta Ads</div><div class="bar" style="width:35%"></div><div>35% — 525 ر.س</div></div>
+  <div class="bar-row"><div class="lbl">TikTok (إعلانات + Spark)</div><div class="bar" style="width:25%"></div><div>25% — 375 ر.س</div></div>
+  <div class="bar-row"><div class="lbl">Snapchat Ads</div><div class="bar" style="width:15%"></div><div>15% — 225 ر.س</div></div>
+  <div class="bar-row"><div class="lbl">مؤثرات منتقاة (عمولة)</div><div class="bar" style="width:15%"></div><div>15% — 225 ر.س</div></div>
+  <div class="bar-row"><div class="lbl">Google/إعادة استهداف</div><div class="bar" style="width:10%"></div><div>10% — 150 ر.س</div></div>
+  <p class="tbl-note">قواعد الانطلاق: الاعتماد 70% على المحتوى المجاني (30 Reels شهرياً) و30% مدفوع، وإعادة استهداف الزوار بعد جمع بيانات Pixel.</p>
+  <h3>12.1 خطة محتوى — 30 فكرة Reels شهرياً (نماذج + بنية)</h3>
+  <table>
+    <tr><th>#</th><th>الفكرة</th><th>الهدف</th><th>أول 3 ثوانٍ (Hook)</th><th>المنتج</th><th>CTA</th></tr>
+    <tr><td>1</td><td>الفرق بين القطن والمايكروفايبر</td><td>تعليمي/وعي</td><td>«القطن ولا المايكرو؟ الفرق بيسرقكِ لو تعرفينه»</td><td>السلس</td><td>احفظي الفيديو</td></tr>
+    <tr><td>2</td><td>كيف تختارين المقاس الصحيح؟</td><td>تقليل المرتجعات</td><td>«90% من المرتجعات سببها مقاس غلط»</td><td>جميع</td><td>راسلينا واتساب</td></tr>
+    <tr><td>3</td><td>اختبار جودة الخياطة</td><td>إثبات جودة</td><td>«اسحبي الخياطة هكذا… لو انفتحت اعرفي السبب»</td><td>اليومي</td><td>شوفي التشكيلة</td></tr>
+    <tr><td>4</td><td>تفاصيل خامة المودال تحت الماكرو</td><td>إبراز المنتج</td><td>لقطة مقربة + «هذا نعومة المودال الحقيقية»</td><td>المودال</td><td>اطلبي الآن</td></tr>
+    <tr><td>5</td><td>لماذا السلس Seamless؟</td><td>تعليمي</td><td>«تحت العباية الضيقة… الحل هذا»</td><td>السلس</td><td>جرّبي باقة</td></tr>
+    <tr><td>6</td><td>Unboxing بترتيب الطرد</td><td>تجربة/ثقة</td><td>«هكذا يوصلكِ طلبك — بخصوصية كاملة»</td><td>العلامة</td><td>الرابط بالبايو</td></tr>
+    <tr><td>7</td><td>مقارنة سعرنا vs المحلات</td><td>قيمة</td><td>«نفس الخامة، الفرق بالسعر كم تتوقعين؟»</td><td>الطقم</td><td>قارني بنفسك</td></tr>
+    <tr><td>8</td><td>ألوان موسمية جديدة</td><td>إطلاق منتج</td><td>عرض سريع للألوان مع صوت جذاب</td><td>الجديد</td><td>اقطني لونك</td></tr>
+    <tr><td>9</td><td>باقة العروس (داخلية فقط)</td><td>سلة عالية</td><td>«تجهيز عروس يبدأ من الداخل»</td><td>الباقة</td><td>احجزي باقتك</td></tr>
+    <tr><td>10</td><td>العناية بالملابس الداخلية</td><td>ولاء</td><td>«غلطة الغسيل اللي تخسركِ قطعتك المفضلة»</td><td>جميع</td><td>تابعينا</td></tr>
+    <tr><td>11–30</td><td colspan="5">تُستكمل الخطة بالتناوب على نفس البنى: مقارنات خامات، تفاصيل تصنيع، مشاهد توضيحية للمقاسات، آراء عميلات (بإذن)، عروض موسمية (رمضان/العيد)، محتوى «يوم مع…» تعليمي، إجابات على أسئلة شائعة. كل فيديو 15–30 ثانية، تصوير منتج فقط، بدون عارضات، بأسلوب راقٍ محترم.</td></tr>
+  </table>
+</div>
+
+<!-- ================= 13 الجمهور ================= -->
+<div class="section" id="s13">
+  <h2 class="sec-title">13. الفئة المستهدفة والاستهداف الإعلاني</h2>
+  <table>
+    <tr><th>الفئة العمرية</th><th>الاحتياجات</th><th>القدرة الشرائية</th><th>المنتجات المناسبة</th><th>الدوافع</th><th>الاعتراضات</th><th>المنصات</th><th>الرسالة</th></tr>
+    <tr><td>18–24</td><td>موضة، سلس، أسعار</td><td>متوسطة</td><td>سلس، منخفض الخصر</td><td>الشكل، الراحة تحت العباية</td><td>«غالي»</td><td>TikTok/IG</td><td>«ستايل وراحة بسعر طالب»</td></tr>
+    <tr><td>25–34</td><td>جودة-سعر، تنوع</td><td>جيدة</td><td>قطني، مودال، طقم</td><td>التوازن بين الجودة والسعر</td><td>«المقاس؟»</td><td>IG/TikTok/Snap</td><td>«جودة تستاهلينها»</td></tr>
+    <tr><td>35–44</td><td>راحة، دعم، عملية</td><td>مرتفعة</td><td>عالي الخصر، قطن، أمومة</td><td>الراحة اليومية والخصوصية</td><td>«الجودة أونلاين؟»</td><td>Snap/IG</td><td>«راحة يومك تبدأ من هنا»</td></tr>
+    <tr><td>45+</td><td>دعم، قطن، مقاسات كبيرة</td><td>جيدة</td><td>مقاسات كبيرة، قطني 100%</td><td>الخامة والثقة</td><td>«التعقيد التقني»</td><td>WhatsApp/Snap</td><td>«مقاسك وخامتك — نساعدك واتساب»</td></tr>
+  </table>
+  <h3>Personas مختصرة</h3>
+  <div class="grid2">
+    <div class="card"><b>نورة (29، الرياض):</b> موظفة، تشتري أونلاين بكثرة، تبحث عن الجودة مقابل السعر، تتابع صانعات محتوى، تكره المرتجعات المعقدة. <b>الرسالة:</b> خصوصية + مقاس مضمون.</div>
+    <div class="card"><b>أمل (38، جدة):</b> أم لثلاثة، أولويتها الراحة والقطن، تشتري بالجملة الصغيرة، تثق بالواتساب والتوصيات. <b>الرسالة:</b> باقات توفير + خامة آمنة.</div>
+  </div>
+  <h3>مؤشرات الأداء المتوقعة (توقعات مبنية على افتراضات، وليست ضمانات)</h3>
+  <table class="fin">
+    <tr><th>المؤشر</th><th>القيمة المرجعية</th><th>ملاحظة</th></tr>
+    <tr><td>CPM</td><td class="num">8–20 ر.س</td><td>حسب المنصة والموسم</td></tr>
+    <tr><td>CTR</td><td class="num">1.5–3%</td><td>—</td></tr>
+    <tr><td>CPC</td><td class="num">0.8–2.5 ر.س</td><td>—</td></tr>
+    <tr><td>Conversion Rate</td><td class="num">1.5–3%</td><td>متجر متخصص جديد</td></tr>
+    <tr><td>AOV</td><td class="num">110–140 ر.س</td><td>مع باقات الطقم</td></tr>
+    <tr><td>CAC</td><td class="num">25–55 ر.س</td><td>هدف خفضه بالمحتوى والإحالة</td></tr>
+    <tr><td>ROAS مستهدف</td><td class="num">3–5x</td><td>بعد شهرين من التحسين</td></tr>
+  </table>
+</div>
+
+<!-- ================= 14 توقعات المبيعات ================= -->
+<div class="section" id="s14">
+  <h2 class="sec-title">14. توقعات المبيعات والنمو — 12 شهراً</h2>
+  <p class="lead">السيناريو المتوسط بافتراضات: CVR 2.2%، AOV 125 ر.س، هامش إجمالي 68%، تسويق ثابت 1,500 ر.س/شهر + نسبة 12% من المبيعات، تكلفة شحن مدعومة 18 ر.س/طلب، مرتجعات 8%، مصاريف تشغيل 2,500 ر.س/شهر.</p>
+  <table class="fin">
+    <tr><th>الشهر</th><th>الزوار</th><th>الطلبات</th><th>المبيعات (ر.س)</th><th>تكلفة البضاعة</th><th>التسويق</th><th>الشحن</th><th>المرتجعات</th><th>التشغيل</th><th>صافي الربح</th></tr>
+    <tr><td>1</td><td class="num">2,000</td><td class="num">44</td><td class="num">5,500</td><td class="num">2,200</td><td class="num">2,160</td><td class="num">790</td><td class="num">440</td><td class="num">2,500</td><td class="num" style="color:var(--red)">-2,590</td></tr>
+    <tr><td>2</td><td class="num">3,200</td><td class="num">70</td><td class="num">8,800</td><td class="num">3,520</td><td class="num">2,556</td><td class="num">1,270</td><td class="num">700</td><td class="num">2,500</td><td class="num" style="color:var(--red)">-1,746</td></tr>
+    <tr><td>3</td><td class="num">4,500</td><td class="num">99</td><td class="num">12,400</td><td class="num">4,960</td><td class="num">2,988</td><td class="num">1,780</td><td class="num">990</td><td class="num">2,500</td><td class="num" style="color:var(--red)">-818</td></tr>
+    <tr><td>4</td><td class="num">6,000</td><td class="num">132</td><td class="num">16,500</td><td class="num">6,600</td><td class="num">3,480</td><td class="num">2,380</td><td class="num">1,320</td><td class="num">2,500</td><td class="num" style="color:var(--green)">220</td></tr>
+    <tr><td>5</td><td class="num">7,500</td><td class="num">165</td><td class="num">20,600</td><td class="num">8,240</td><td class="num">3,972</td><td class="num">2,970</td><td class="num">1,650</td><td class="num">2,500</td><td class="num" style="color:var(--green)">1,268</td></tr>
+    <tr><td>6</td><td class="num">9,000</td><td class="num">198</td><td class="num">24,800</td><td class="num">9,920</td><td class="num">4,476</td><td class="num">3,560</td><td class="num">1,980</td><td class="num">2,500</td><td class="num" style="color:var(--green)">2,364</td></tr>
+    <tr><td>7 (عيد/موسم)</td><td class="num">12,000</td><td class="num">288</td><td class="num">36,000</td><td class="num">14,400</td><td class="num">5,820</td><td class="num">5,180</td><td class="num">2,880</td><td class="num">2,500</td><td class="num" style="color:var(--green)">5,220</td></tr>
+    <tr><td>8</td><td class="num">11,000</td><td class="num">242</td><td class="num">30,300</td><td class="num">12,120</td><td class="num">5,136</td><td class="num">4,360</td><td class="num">2,420</td><td class="num">2,500</td><td class="num" style="color:var(--green)">3,764</td></tr>
+    <tr><td>9</td><td class="num">12,500</td><td class="num">275</td><td class="num">34,400</td><td class="num">13,760</td><td class="num">5,628</td><td class="num">4,950</td><td class="num">2,750</td><td class="num">2,500</td><td class="num" style="color:var(--green)">4,812</td></tr>
+    <tr><td>10</td><td class="num">14,000</td><td class="num">308</td><td class="num">38,500</td><td class="num">15,400</td><td class="num">6,120</td><td class="num">5,540</td><td class="num">3,080</td><td class="num">2,500</td><td class="num" style="color:var(--green)">5,860</td></tr>
+    <tr><td>11 (موسم)</td><td class="num">17,000</td><td class="num">374</td><td class="num">46,800</td><td class="num">18,720</td><td class="num">7,116</td><td class="num">6,730</td><td class="num">3,740</td><td class="num">2,500</td><td class="num" style="color:var(--green)">7,994</td></tr>
+    <tr><td>12</td><td class="num">16,500</td><td class="num">363</td><td class="num">45,400</td><td class="num">18,160</td><td class="num">6,948</td><td class="num">6,530</td><td class="num">3,630</td><td class="num">2,500</td><td class="num" style="color:var(--green)">7,632</td></tr>
+  </table>
+  <div class="box green"><b>الخلاصة:</b> نقطة التعادل التشغيلية تتحقق قرب الشهر الرابع، واسترداد رأس المال (30,195.68 ر.س) خلال 8–14 شهراً في السيناريو المتوسط. متحفظ: 15–20 شهراً. متفائل: 6–9 أشهر.</div>
+</div>
+
+<!-- ================= 15 خدمة العملاء ================= -->
+<div class="section" id="s15">
+  <h2 class="sec-title">15. خدمة العملاء والتشغيل</h2>
+  <ul>
+    <li><b>استقبال وتأكيد الطلبات:</b> تأكيد واتساب خلال ساعتين لكل طلب COD، وتقليل الطلبات الوهمية.</li>
+    <li><b>دليل المقاسات:</b> جدول مقاسات عربي مصور + مساعدة واتساب نسائية فقط (توظيف/عقد دعم نسائي).</li>
+    <li><b>الإرجاع والاستبدال:</b> سياستان واضحتان مكتوبتان توافقان نظام حماية المستهلك؛ الاستبدال للمقاس أولوية على الإرجاع النقدي.</li>
+    <li><b>ما بعد الشراء:</b> رسالة شكر + تعليمات العناية بالخامة + كود خصم صديقة بعد 7 أيام.</li>
+    <li><b>الأدوات المقترحة:</b> منصة تجارة (Salla/Shopify ~100–300 ر.س/شهر)، WhatsApp Business API (~200–400 ر.س/شهر)، نظام إدارة مخزون بسيط، لوحة متابعة شحنات الشركات.</li>
+    <li><b>الخصوصية:</b> تشفير بيانات العميلات، منع مشاركة أرقامهن مع أي طرف ثالث، وتدريب فريق الدعم على سرية تامة.</li>
+  </ul>
+</div>
+
+<!-- ================= 16 المخاطر ================= -->
+<div class="section" id="s16">
+  <h2 class="sec-title">16. المخاطر وخطط المعالجة</h2>
+  <table>
+    <tr><th>الخطر</th><th>الأثر</th><th>الاحتمال</th><th>خطة المعالجة</th></tr>
+    <tr><td>اختلاف جودة الشحنة عن العينة</td><td>مرتجعات وسمعة</td><td>متوسط</td><td>فحص SGS/مفتش محلي قبل الشحن + عقد بمواصفات ملزمة</td></tr>
+    <tr><td>تأخر الشحن</td><td>نفاد مخزون</td><td>متوسط</td><td>تخطيط 90 يوماً مسبقاً + مخزون أمان 25%</td></tr>
+    <tr><td>تقلب العملات</td><td>ارتفاع التكلفة</td><td>منخفض–متوسط</td><td>تسعير يحتمل 10% + عقود بأسعار ثابتة قصيرة</td></tr>
+    <tr><td>ارتفاع تكاليف الإعلان</td><td>ضغط CAC</td><td>مرتفع</td><td>الاعتماد على المحتوى والإحالة (هدف 40% مبيعات مباشرة)</td></tr>
+    <tr><td>منتجات راكدة/مقاسات غير مطلوبة</td><td>جمود نقدي</td><td>مرتفع</td><td>بدء بـ 6–8 موديلات فقط + تحليل ABC شهري + باقات التصريف</td></tr>
+    <tr><td>ارتفاع المرتجعات</td><td>تآكل الهامش</td><td>متوسط</td><td>دليل مقاسات دقيق + فلتر واتساب + صور ماكرو حقيقية</td></tr>
+    <tr><td>مشاكل موردين</td><td>تعطل التوريد</td><td>متوسط</td><td>موردان معتمدان على الأقل لكل فئة منتج</td></tr>
+    <tr><td>المتطلبات التنظيمية والجودة</td><td>غرامات/سحب</td><td>منخفض</td><td>شهادات OEKO-TEX/SASO للملامسة الجلدية + سجل تجاري ومعروف</td></tr>
+  </table>
+</div>
+
+<!-- ================= 17 خطة 90 يوم ================= -->
+<div class="section" id="s17">
+  <h2 class="sec-title">17. خطة التنفيذ والإطلاق — 90 يوماً</h2>
+  <table>
+    <tr><th>المرحلة</th><th>الأيام</th><th>المهام والمخرجات</th><th>التكلفة التقديرية</th></tr>
+    <tr><td>1. البحث والتفاوض</td><td>1–15</td><td>قائمة 10 موردين، طلب 5 عروض أسعار، مقارنة موثقة</td><td class="num">—</td></tr>
+    <tr><td>2. العينات واختبار الجودة</td><td>10–30</td><td>عينات 3 موردين × 5 موديلات، اختبار غسيل وشد وخياطة، اختيار موردين اثنين</td><td class="num">$250–400</td></tr>
+    <tr><td>3. اختيار التشكيلة</td><td>25–40</td><td>اعتماد 8–12 موديل + مصفوفة مقاسات/ألوان/كميات</td><td class="num">—</td></tr>
+    <tr><td>4. الهوية والتغليف</td><td>30–50</td><td>دليل الهوية، قوالب محتوى، طلب التغليف المحلي</td><td class="num">$900</td></tr>
+    <tr><td>5. الموقع الإلكتروني</td><td>40–60</td><td>المتجر + بوابات الدفع + ربط SPL + سياسات الإرجاع</td><td class="num">$880</td></tr>
+    <tr><td>6. المخزون والتشغيل</td><td>55–75</td><td>استلام الجمارك، فحص عشوائي 10%، تجهيز المخزون وأدوات الدعم</td><td class="num">ضمن رأس المال</td></tr>
+    <tr><td>7. التسويق المسبق</td><td>60–80</td><td>30 Reels جاهزة، حملات تجريبية، قائمة انتظار واتساب</td><td class="num">$800</td></tr>
+    <tr><td>8. الإطلاق الرسمي</td><td>85–90</td><td>الإطلاق + قياس يومي + تحسين الأسبوع الأول</td><td class="num">—</td></tr>
+  </table>
+</div>
+
+<!-- ================= 18 التوصيات ================= -->
+<div class="section" id="s18">
+  <h2 class="sec-title">18. التوصيات الاستثمارية النهائية</h2>
+  <ol>
+    <li><b>هل المشروع مجدٍ؟</b> نعم، بشرط التخصص الحصري والانضباط المالي والبدء صغيراً.</li>
+    <li><b>أفضل دولة للتوريد أولاً:</b> تركيا (جودة + سرعة + MOQ منخفض)، والصين ثانياً للسلس عند التوسع.</li>
+    <li><b>أفضل خمسة مصانع للتواصل:</b> Aynuz (تركيا)، TOLIN (تركيا)، ANIT (تركيا)، Shenzhen Grace (الصين)، Shantou Rongchang (الصين) — مع إبقاء قناة مفتوحة عبر Alibaba للمقارنة.</li>
+    <li><b>أفضل منتجات للبدء:</b> سروال قطني يومي + سلس + عالي الخصر + مودال + حمالة بلا أسلاك + طقم 3 قطع + طقم متناسق.</li>
+    <li><b>الكمية الأولية:</b> 800–2,000 قطعة (سيناريو اقتصادي–متوسط).</li>
+    <li><b>متوسط التكلفة المستهدف للقطعة:</b> ≤ 5.0 ر.س وصولاً للمخزن.</li>
+    <li><b>أسعار البيع:</b> 39–149 ر.س حسب المنتج، ومتوسط سلة 120+ ر.س.</li>
+    <li><b>الهامش المستهدف:</b> 55–65% إجمالي.</li>
+    <li><b>أفضل قنوات البيع:</b> المتجر الرسمي + واتساب + إنستغرام/سناب شات.</li>
+    <li><b>استراتيجية التسويق:</b> محتوى تعليمي راقٍ (30 Reels) + إعلانات موجهة للمبيعات + إعادة استهداف.</li>
+    <li><b>رأس المال الموصى به:</b> 18,872.30 – 30,195.68 ر.س.</li>
+    <li><b>نقطة التعادل:</b> تشغيلياً في الشهر 4 تقريباً، واسترداد رأس المال خلال 8–14 شهراً.</li>
+    <li><b>أهم عوامل النجاح:</b> جودة ثابتة موثقة، خصوصية مطلقة، مقاسات صحيحة، محتوى يبني ثقة، وانضباط في المخزون.</li>
+  </ol>
+  <div class="box highlight"><b>القرار التنفيذي الموصى به:</b> المضي في المشروع وفق السيناريو المتوسط (≈30,195.68 ر.س)، مع بوابة قرار عند اليوم 45: إذا تجاوزت العينات اختبارات الجودة وتحقق معدل طلبات ما قبل الإطلاق ≥ 150 طلب مهتم، يُستكمل؛ وإلا يُخفض إلى السيناريو الاقتصادي.</div>
+</div>
+
+<!-- ================= 19 المصادر ================= -->
+<div class="section" id="s19">
+  <h2 class="sec-title">19. المصادر والتحقق من البيانات</h2>
+  <ul>
+    <li>مواقع المنافسين الرسمية: hawa.co — int.nayomi.com — roselingerie.net — manar.sa — jasmine.com.sa</li>
+    <li>بيانات Aynuz الأولية كما قدمها صاحب المشروع (aynuz.com — team@aynuz.com — +90 555 100 6979) — لم تُتحقق ولا تُعد عرض سعر رسمياً.</li>
+    <li>المنصات B2B للموردين: Alibaba.com — Made-in-China.com</li>
+    <li>تقديرات حجم السوق: تقارير قطاعية عامة (Statista، Mordor Intelligence) — تقديرات استرشادية لا إحصائية حكومية مفصلة.</li>
+    <li>الأنظمة: وزارة التجارة (معروف)، نظام حماية المستهلك السعودي، متطلبات SASO للمنتجات الملامسة للجلد.</li>
+  </ul>
+  <p class="tbl-note">تاريخ الوصول للمعلومات: نوفمبر 2026. لم تُجرَ مفاوضات فعلية مع أي مصنع أثناء إعداد هذه الدراسة، ولم تُختلق أي بيانات تواصل؛ كل خانة غير موثقة وُسمت «غير متاح علناً». جميع الأرقام المالية تقديرات مبنية على افتراضات معلنة وقابلة للتحديث بعروض أسعار رسمية.</p>
+</div>
+
+<footer>
+  دراسة سوق وجدوى تجارية — علامة ملابس داخلية نسائية في المملكة العربية السعودية · نوفمبر 2026 · وثيقة سرية لأغراض القرار الاستثماري
+</footer>
+
+</div>
+</body>
+</html>
